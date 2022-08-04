@@ -24,7 +24,7 @@ def getPrediction(filename):
     
     #Load model
     img_path = 'static/images/' + filename
-    pickle.load(open('/model/resnet.pkl','rb'))
+    pickle.load(open("model/resnet.pkl",'rb'))
     
     SIZE = 224 #Resize to same size as training images
     img = np.asarray(Image.open(img_path).resize((SIZE,SIZE)))
