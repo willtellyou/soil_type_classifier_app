@@ -10,8 +10,7 @@ Original file is located at
 import numpy as np
 from PIL import Image
 from sklearn.preprocessing import LabelEncoder
-from tensorflow.keras.models import load_model
-import tensorflow_hub as hub
+import pickle
 
 """**prediction class**"""
 
@@ -25,7 +24,7 @@ def getPrediction(filename):
     
     #Load model
     img_path = 'static/images/' + filename
-    my_model=load_model("/model/resnet.h5",custom_objects={'KerasLayer':hub.KerasLayer})
+    pickle.load(open('/model/resnet.pkl','rb'))
     
     SIZE = 224 #Resize to same size as training images
     img = np.asarray(Image.open(img_path).resize((SIZE,SIZE)))
