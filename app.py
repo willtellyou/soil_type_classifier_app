@@ -18,6 +18,7 @@ UPLOAD_FOLDER = 'static/images/'
 
 #Create an app object using the Flask class. 
 app = Flask(__name__, static_folder="static")
+app=app.app
 
 #Add reference fingerprint. 
 #Cookies travel with a signature that they claim to be legit. 
