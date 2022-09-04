@@ -1,9 +1,0 @@
-Flask
-opencv-python
-Werkzeug
-numpy
-requests
-gunicorn
-scikit-learn
-Pillow
-tensorflow-cpu
